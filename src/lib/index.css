@@ -1,0 +1,38 @@
+a{
+    text-decoration: none ; 
+    user-select: none;
+}
+
+.inline{
+    display:inline ;
+}
+
+div.UnitIconReactProfile {
+    position: relative;
+    border-radius: 50px;
+}
+
+.UnitIconReactProfile svg{
+    transition: all 0.2s ease-in ; 
+    box-shadow: none ;
+    background: transparent ; 
+    border-radius: 5px ;
+}
+
+.UnitIconReactProfile svg:hover{
+    transition: all 0.2s ease-in  ;
+    border-radius: 10px;
+    filter: drop-shadow(0px 12px 7px rgba(0,0,0,0.5));  
+    transform: scale(1.1) translateX(10px) ; 
+    z-index: 3;
+}
+
+svg{
+    margin:1px ; 
+    padding:1px ; 
+}
+
+.fa{
+    font-size: 150%;
+    padding:2px; 
+}

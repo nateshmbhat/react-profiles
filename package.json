@@ -10,6 +10,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.1",
+    "scrape-it": "^5.1.1",
     "store": "^2.0.12"
   },
   "scripts": {
@@ -26,5 +27,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "ws": "3.3.2"
+  }
 }
