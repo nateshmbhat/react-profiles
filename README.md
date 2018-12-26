@@ -22,7 +22,7 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 ```
 
-> **NOTE : DONT FORGET to include fontawesome css in your index.html**
+#### **NOTE : DONT FORGET to include fontawesome css in your index.html**
 ```html
 <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
 ```
