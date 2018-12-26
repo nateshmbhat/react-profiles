@@ -17,6 +17,11 @@
 
 ## Usage : 
 
+```npm
+npm install react-profiles
+```
+
+
 ```js
 import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, GooglePlus, Youtube, Yahoo, Twitch, Twitter, Skype } from 'react-profiles';
 
@@ -96,3 +101,8 @@ Props :
 + newPage = open new page on clicking link (default = true)
 + link = profile link
 + tooltip = tooltip to be shown on mouse hover
+
+
+## Links : 
++ **Homepage :** https://github.com/nateshmbhat/react-profiles/
++ **npm install page :** https://www.npmjs.com/package/react-profiles
