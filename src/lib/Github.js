@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Grid, Button, Paper, Tooltip } from '@material-ui/core';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
-import { StarBorder, ArchiveRounded, TollTwoTone } from '@material-ui/icons'
 import store from 'store';
 import { GithubSVG } from './svg/svgs';
 const expirePlugin = require('store/plugins/expire');
@@ -56,22 +55,24 @@ class GithubProfileBar extends Component {
     render() {
         const flatButtonStyle = { backgroundColor: 'rgba(230,230,230,0.8)', borderRadius: '0', height: '100%' };
         const { totalRepos, totalStars } = { ...this.state }
-        let { tooltip, username , barHeight="50px" } = { ...this.props }
-        tooltip = tooltip || 'visit profile'
+        let { tooltip, username, barHeight = "50px" } = { ...this.props }
+        tooltip = tooltip || 'Visit Profile'
 
         const getPad = (val) => { return { 'padding': val } };
         return <>
             <Grid container>
                 <Paper style={{ 'padding': '0px', margin: '0', height: barHeight }}>
-                    <Button variant="text" style={flatButtonStyle}><GithubSVG /></Button>
+                    <Tooltip title="Github" >
+                        <Button variant="text" style={flatButtonStyle}><GithubSVG /></Button>
+                    </Tooltip>
                     <Tooltip title={tooltip}>
                         <a target="_blank" href={`https://github.com/${username}`} style={{ padding: '10px' }}>{username}</a>
                     </Tooltip>
                     <Tooltip title={`${totalRepos} Repositories`}>
-                        <Button variant="text" style={flatButtonStyle}><ArchiveRounded style={getPad('5px')} /> <b>{totalRepos}</b></Button>
+                        <Button variant="text" style={flatButtonStyle}>  <i className="fa fa-archive"></i><b>{totalRepos}</b></Button>
                     </Tooltip>
                     <Tooltip title={`${totalStars} Stars`}>
-                        <Button variant="text" style={flatButtonStyle}> <StarBorder style={getPad('2px')} /> <b>{totalStars}</b></Button>
+                        <Button variant="text" style={flatButtonStyle}> <i className="fa fa-star"></i> <b>{totalStars}</b></Button>
                     </Tooltip>
                 </Paper>
             </Grid>

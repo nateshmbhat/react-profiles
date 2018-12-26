@@ -7,14 +7,14 @@ const StyledIcon = ({ children, link, tooltip }) => {
     return (
 
         <Tooltip title={tooltip}>
-            <a href={link}>
+            <a href={link} target="_blank">
                 {children}
             </a>
         </Tooltip >
     );
 }
 
-const Instagram = ({ link, tooltip }) => {
+const Instagram = ({ link = '#', tooltip="Instagram" }) => {
     return (
         <StyledIcon {...{ link, tooltip }}>
             <div className="UnitIconReactProfile inline">
@@ -24,7 +24,7 @@ const Instagram = ({ link, tooltip }) => {
     );
 }
 
-const Youtube= ({ link, tooltip }) => {
+const Youtube= ({ link = '#', tooltip="Youtube" }) => {
     return (
         <StyledIcon {...{ link, tooltip }}>
             <div className="UnitIconReactProfile inline">
@@ -34,7 +34,7 @@ const Youtube= ({ link, tooltip }) => {
     );
 }
 
-const Facebook = ({ link, tooltip }) => {
+const Facebook = ({ link = '#', tooltip = "Facebook" }) => {
     return (
         <StyledIcon {...{ link, tooltip }}>
             <div className="UnitIconReactProfile inline">
@@ -44,7 +44,7 @@ const Facebook = ({ link, tooltip }) => {
     );
 }
 
-const GooglePlus = ({ link, tooltip }) => {
+const GooglePlus = ({ link = '#', tooltip="Google Plus" }) => {
     return (
         <StyledIcon {...{ link, tooltip }}>
             <div className="UnitIconReactProfile inline">
@@ -54,7 +54,7 @@ const GooglePlus = ({ link, tooltip }) => {
     );
 }
 
-const Twitch = ({ link, tooltip }) => {
+const Twitch = ({ link = '#', tooltip="Twitch" }) => {
     return (
         <StyledIcon {...{ link, tooltip }}>
             <div className="UnitIconReactProfile inline">
@@ -66,7 +66,7 @@ const Twitch = ({ link, tooltip }) => {
 
 
 
-const Skype = ({ link, tooltip }) => {
+const Skype = ({ link = '#', tooltip = "Skype" }) => {
     return (
         <StyledIcon {...{ link, tooltip }}>
             <div className="UnitIconReactProfile inline">
@@ -77,7 +77,7 @@ const Skype = ({ link, tooltip }) => {
 }
 
 
-const Yahoo= ({ link, tooltip }) => {
+const Yahoo= ({ link = '#', tooltip="Yahoo" }) => {
     return (
         <StyledIcon {...{ link, tooltip }}>
             <div className="UnitIconReactProfile inline">
@@ -88,7 +88,7 @@ const Yahoo= ({ link, tooltip }) => {
 }
 
 
-const Twitter= ({ link, tooltip }) => {
+const Twitter= ({ link = '#', tooltip = "Twitter" }) => {
     return (
         <StyledIcon {...{ link, tooltip }}>
             <div className="UnitIconReactProfile inline">
@@ -101,4 +101,4 @@ const Twitter= ({ link, tooltip }) => {
 
 
 
-export {Yahoo,Skype, Twitch ,Facebook , GooglePlus , Instagram , Youtube , Twitter};
+export {Yahoo,Skype, Twitch ,Facebook , GooglePlus , Instagram , Youtube , Twitter}

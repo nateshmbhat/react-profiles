@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Grid, Button, Paper, Tooltip } from '@material-ui/core';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
-import { StarBorder  } from '@material-ui/icons'
 import {StackOverflowSVG} from './svg/svgs'
 import store from 'store';
 const expirePlugin = require('store/plugins/expire');
@@ -83,23 +82,27 @@ class StackOverflowBar extends Component {
     render() {
         const flatButtonStyle = { backgroundColor: 'rgba(230,230,230,0.8)', borderRadius: '0', height: '100%' };
         const { displayname , questions , answers, link, reputation, bronze, gold, silver } = { ...this.state }
-        let { tooltip, barHeight ="50px"} = { ...this.props }
-        tooltip = tooltip || 'visit Profile'
+        let { tooltip} = { ...this.props }
+        tooltip = tooltip || 'Visit Profile'
         console.log("PROPS , state = ", this.state, this.props);
 
         const getPad = (val) => { return { 'padding': val } };
         return <>
 
             <Grid container>
-                <Paper style={{ 'padding': '0px', margin: '0', height: barHeight }}>
+                <Paper style={{backgroundColor:'rgba(230,230,230,0.8)'}}>
+                    <div className="stackOverFlowDiv">
+
+                <Tooltip title="StackOverflow" >
                     <Button variant="text" style={flatButtonStyle}><StackOverflowSVG/></Button>
 
+</Tooltip>
                     <Tooltip title={tooltip}>
                         <a target="_blank" href={link} style={{ padding: '10px' }}>{displayname}</a>
                     </Tooltip>
 
                     <Tooltip title="Reputation Points">
-                        <Button variant="text" style={flatButtonStyle}> <StarBorder style={getPad('2px')} />
+                        <Button variant="text" style={flatButtonStyle}> <i className="fa fa-star"></i>
                          <b>{reputation}</b></Button>
                     </Tooltip>
 
@@ -123,6 +126,7 @@ class StackOverflowBar extends Component {
                     <Tooltip title={answers+' answers'}>
                         <Button variant="text" style={flatButtonStyle}> <i className="fa fa-stack-overflow" style={{color:'darkgreen'}}></i> <b>{answers}</b></Button>
                     </Tooltip>
+                    </div>
                 </Paper>
             </Grid>
         </>

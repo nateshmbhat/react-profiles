@@ -36,3 +36,22 @@ svg{
     font-size: 150%;
     padding:2px; 
 }
+
+i.fa-star,.fa-archive{
+    font-size : 100%;
+}
+
+button i{
+    transition: all 0.3s ; 
+}
+
+button:hover i.fa-star{
+    transform:  rotate(180deg) ; 
+    color:orange ;
+}
+
+.Paper{
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12); 
+    border-radius: 4px ; 
+    display:flex ; 
+}
