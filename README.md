@@ -43,7 +43,7 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 
 #### StackOverflow (auto fetch data) : 
-[![Imgur](https://i.imgur.com/LB4rfpI.png)](#)
+[![Imgur](https://imgur.com/LB4rfpI.png)](#)
 
 ```js
 <StackOverflow userid="6665568" tooltip="custom tooltip" />
@@ -76,7 +76,7 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 ### Profile Chips : 
 
-[![](https://i.imgur.com/XZ2S0JX.png)](#)
+[![](https://imgur.com/XZ2S0JX.png)](#)
 
 ```js
 <Instagram link="https://www.instagram.com/nateshmbhat/" />
