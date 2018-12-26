@@ -172,8 +172,10 @@ function (_Component) {
           silver = _this$state.silver;
 
       var _this$props2 = _objectSpread({}, this.props),
-          tooltip = _this$props2.tooltip;
+          tooltip = _this$props2.tooltip,
+          newPage = _this$props2.newPage;
 
+      if (newPage == undefined) newPage = true;
       tooltip = tooltip || 'Visit Profile';
       console.log("PROPS , state = ", this.state, this.props);
       return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_core.Grid, {
@@ -188,7 +190,7 @@ function (_Component) {
       }, _react.default.createElement(_svgs.StackOverflowSVG, null))), _react.default.createElement(_core.Tooltip, {
         title: tooltip
       }, _react.default.createElement("a", {
-        target: "_blank",
+        target: newPage ? '_blank' : '',
         href: link,
         style: {
           padding: '10px'

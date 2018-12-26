@@ -128,9 +128,9 @@ function (_Component) {
       var _this$props2 = _objectSpread({}, this.props),
           tooltip = _this$props2.tooltip,
           username = _this$props2.username,
-          _this$props2$barHeigh = _this$props2.barHeight,
-          barHeight = _this$props2$barHeigh === void 0 ? "50px" : _this$props2$barHeigh;
+          newPage = _this$props2.newPage;
 
+      if (newPage == undefined) newPage = true;
       tooltip = tooltip || 'Visit Profile';
 
       var getPad = function getPad(val) {
@@ -151,7 +151,7 @@ function (_Component) {
       }, _react.default.createElement(_svgs.GithubSVG, null))), _react.default.createElement(_core.Tooltip, {
         title: tooltip
       }, _react.default.createElement("a", {
-        target: "_blank",
+        target: newPage ? '_blank' : '',
         href: "https://github.com/".concat(username),
         style: {
           padding: '10px'

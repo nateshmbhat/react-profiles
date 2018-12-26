@@ -28,8 +28,9 @@ class MyToolTip extends Component {
 class HackerRank extends Component {
     render() {
 
-        let { tooltip, contestRating, competitions, username, rank, category, bronze, silver, gold, barHeight = "50px" } = { ...this.props }
+        let { tooltip, contestRating, competitions, username, rank, newPage , category, bronze, silver, gold, barHeight = "50px" } = { ...this.props }
 
+        if(newPage==undefined) newPage= true;  
         tooltip = tooltip || 'Visit Profile';
         const flatButtonStyle = { backgroundColor: 'rgba(230,230,230,0.8)', borderRadius: '0', height: '100%' };
 
@@ -40,7 +41,7 @@ class HackerRank extends Component {
                         <Button variant="text" style={flatButtonStyle}><HackerrankSVG fill="darkgreen" /></Button>
                     </Tooltip>
                     <Tooltip title={tooltip}>
-                        <a target="_blank" href={`https://www.hackerrank.com/profile/${username}`} style={{ padding: '10px' }}>{username}</a>
+                        <a target={newPage?'_blank' : ''} href={`https://www.hackerrank.com/profile/${username}`} style={{ padding: '10px' }}>{username}</a>
                     </Tooltip>
 
                     {

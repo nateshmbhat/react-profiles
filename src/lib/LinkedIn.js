@@ -12,7 +12,8 @@ store.addPlugin(expirePlugin)
 const LinkedInProfileBar = (props) => {
 
     const flatButtonStyle = { backgroundColor: 'rgba(230,230,230,0.8)', borderRadius: '0', height: '100%', textTransform:'none' };
-    let { tooltip, username, organization, role, barHeight = "50px" } = { ...props }
+    let { tooltip, username, organization, role, newPage } = { ...props }
+    if(newPage==undefined) newPage = true; 
     tooltip = tooltip || 'Visit Profile'
 
     const getPad = (val) => { return { 'padding': val } };
@@ -23,7 +24,7 @@ const LinkedInProfileBar = (props) => {
                     <Button variant="text" style={flatButtonStyle}><LinkedInSVG /></Button>
                 </Tooltip>
                 <Tooltip title={tooltip}>
-                    <a target="_blank" href={`https://in.linkedin.com/in/${username}`} style={{ padding: '10px' }}>{username}</a>
+                    <a target={newPage?'_blank' : ''} href={`https://in.linkedin.com/in/${username}`} style={{ padding: '10px' }}>{username}</a>
                 </Tooltip>
                 {
                     organization &&
@@ -35,7 +36,7 @@ const LinkedInProfileBar = (props) => {
 
                 {
                     role &&
-                    <Tooltip title={`role`}>
+                    <Tooltip title={`Role`}>
                         <Button variant="text" style={{ ...flatButtonStyle, textTransform: 'none' }}> <PersonSVG style={getPad('2px')} /> {role}</Button>
                     </Tooltip>
                 }

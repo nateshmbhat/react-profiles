@@ -22,13 +22,6 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 ```
 
-> **NOTE : DONT FORGET to include fontawesome css in your index.html**
-```html
-<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
-```
-
-
-
 
 ### Profile Bars : 
 
@@ -93,6 +86,10 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 Props :
  
-+ newPage = open new page on clicking link (default = true)
-+ link = profile link
-+ tooltip = tooltip to be shown on mouse hover
++ bool newPage = open new page on clicking link (default = true)
++ string link = profile link
++ string tooltip = tooltip to be shown on mouse hover
+
+
+
+

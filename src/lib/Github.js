@@ -55,7 +55,8 @@ class GithubProfileBar extends Component {
     render() {
         const flatButtonStyle = { backgroundColor: 'rgba(230,230,230,0.8)', borderRadius: '0', height: '100%' };
         const { totalRepos, totalStars } = { ...this.state }
-        let { tooltip, username, barHeight = "50px" } = { ...this.props }
+        let { tooltip, username, newPage } = { ...this.props }
+        if(newPage==undefined) newPage = true ; 
         tooltip = tooltip || 'Visit Profile'
 
         const getPad = (val) => { return { 'padding': val } };
@@ -66,7 +67,7 @@ class GithubProfileBar extends Component {
                         <Button variant="text" style={flatButtonStyle}><GithubSVG /></Button>
                     </Tooltip>
                     <Tooltip title={tooltip}>
-                        <a target="_blank" href={`https://github.com/${username}`} style={{ padding: '10px' }}>{username}</a>
+                        <a target={newPage?'_blank' : ''} href={`https://github.com/${username}`} style={{ padding: '10px' }}>{username}</a>
                     </Tooltip>
                     <Tooltip title={`${totalRepos} Repositories`}>
                         <Button variant="text" style={flatButtonStyle}>  <i className="fa fa-archive"></i><b>{totalRepos}</b></Button>

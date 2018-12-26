@@ -12,8 +12,10 @@
     "url": "https://github.com/nateshmbhat/react-profiles"
   },
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/nateshmbhat/react-profiles",
+  "readme": "README.md",
+  "displayName": "react-profiles",
   "author": "nateshmbhat",
   "dependencies": {
     "@material-ui/core": "^3.7.0",

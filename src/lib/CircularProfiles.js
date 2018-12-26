@@ -3,20 +3,20 @@ import { InstagramSVG, YoutubeSVG, FacebookSVG, GooglePlusSVG, TwitchSVG, SkypeS
 import { Tooltip } from '@material-ui/core';
 
 
-const StyledIcon = ({ children, link, tooltip }) => {
+const StyledIcon = ({ children, link, tooltip  , newPage}) => {
     return (
 
         <Tooltip title={tooltip}>
-            <a href={link} target="_blank">
+            <a href={link} target={newPage?"_blank": ""}>
                 {children}
             </a>
         </Tooltip >
     );
 }
 
-const Instagram = ({ link = '#', tooltip="Instagram" }) => {
+const Instagram = ({ link = '#', tooltip="Instagram" , newPage = true }) => {
     return (
-        <StyledIcon {...{ link, tooltip }}>
+        <StyledIcon {...{ link, tooltip , newPage }}>
             <div className="UnitIconReactProfile inline">
                 <InstagramSVG width="50px" height="50px" />
             </div>
@@ -24,9 +24,9 @@ const Instagram = ({ link = '#', tooltip="Instagram" }) => {
     );
 }
 
-const Youtube= ({ link = '#', tooltip="Youtube" }) => {
+const Youtube= ({ link = '#', tooltip="Youtube" , newPage = true }) => {
     return (
-        <StyledIcon {...{ link, tooltip }}>
+        <StyledIcon {...{ link, tooltip , newPage }}>
             <div className="UnitIconReactProfile inline">
                 <YoutubeSVG width="50px" height="50px" />
             </div>
@@ -34,9 +34,9 @@ const Youtube= ({ link = '#', tooltip="Youtube" }) => {
     );
 }
 
-const Facebook = ({ link = '#', tooltip = "Facebook" }) => {
+const Facebook = ({ link = '#', tooltip = "Facebook" , newPage = true }) => {
     return (
-        <StyledIcon {...{ link, tooltip }}>
+        <StyledIcon {...{ link, tooltip , newPage }}>
             <div className="UnitIconReactProfile inline">
                 <FacebookSVG width="50px" height="50px" />
             </div>
@@ -44,9 +44,9 @@ const Facebook = ({ link = '#', tooltip = "Facebook" }) => {
     );
 }
 
-const GooglePlus = ({ link = '#', tooltip="Google Plus" }) => {
+const GooglePlus = ({ link = '#', tooltip="Google Plus" , newPage = true }) => {
     return (
-        <StyledIcon {...{ link, tooltip }}>
+        <StyledIcon {...{ link, tooltip , newPage }}>
             <div className="UnitIconReactProfile inline">
                 <GooglePlusSVG width="50px" height="50px" />
             </div>
@@ -54,9 +54,9 @@ const GooglePlus = ({ link = '#', tooltip="Google Plus" }) => {
     );
 }
 
-const Twitch = ({ link = '#', tooltip="Twitch" }) => {
+const Twitch = ({ link = '#', tooltip="Twitch" , newPage = true }) => {
     return (
-        <StyledIcon {...{ link, tooltip }}>
+        <StyledIcon {...{ link, tooltip , newPage }}>
             <div className="UnitIconReactProfile inline">
                 <TwitchSVG width="50px" height="50px" />
             </div>
@@ -66,9 +66,9 @@ const Twitch = ({ link = '#', tooltip="Twitch" }) => {
 
 
 
-const Skype = ({ link = '#', tooltip = "Skype" }) => {
+const Skype = ({ link = '#', tooltip = "Skype" , newPage = true }) => {
     return (
-        <StyledIcon {...{ link, tooltip }}>
+        <StyledIcon {...{ link, tooltip , newPage }}>
             <div className="UnitIconReactProfile inline">
                 <SkypeSVG width="50px" height="50px" />
             </div>
@@ -77,9 +77,9 @@ const Skype = ({ link = '#', tooltip = "Skype" }) => {
 }
 
 
-const Yahoo= ({ link = '#', tooltip="Yahoo" }) => {
+const Yahoo= ({ link = '#', tooltip="Yahoo" , newPage = true }) => {
     return (
-        <StyledIcon {...{ link, tooltip }}>
+        <StyledIcon {...{ link, tooltip , newPage }}>
             <div className="UnitIconReactProfile inline">
                 <YahooSVG width="50px" height="50px" />
             </div>
@@ -88,9 +88,9 @@ const Yahoo= ({ link = '#', tooltip="Yahoo" }) => {
 }
 
 
-const Twitter= ({ link = '#', tooltip = "Twitter" }) => {
+const Twitter= ({ link = '#', tooltip = "Twitter" , newPage = true }) => {
     return (
-        <StyledIcon {...{ link, tooltip }}>
+        <StyledIcon {...{ link, tooltip , newPage }}>
             <div className="UnitIconReactProfile inline">
                 <TwitterSVG width="50px" height="50px" />
             </div>

@@ -82,7 +82,8 @@ class StackOverflowBar extends Component {
     render() {
         const flatButtonStyle = { backgroundColor: 'rgba(230,230,230,0.8)', borderRadius: '0', height: '100%' };
         const { displayname, questions, answers, link, reputation, bronze, gold, silver } = { ...this.state }
-        let { tooltip } = { ...this.props }
+        let { tooltip , newPage } = { ...this.props }
+        if(newPage==undefined) newPage = true; 
         tooltip = tooltip || 'Visit Profile'
         console.log("PROPS , state = ", this.state, this.props);
 
@@ -95,7 +96,7 @@ class StackOverflowBar extends Component {
                     </Tooltip>
 
                     <Tooltip title={tooltip}>
-                        <a target="_blank" href={link} style={{ padding: '10px' }}>{displayname}</a>
+                        <a target={newPage?'_blank' : ''} href={link} style={{ padding: '10px' }}>{displayname}</a>
                     </Tooltip>
 
 

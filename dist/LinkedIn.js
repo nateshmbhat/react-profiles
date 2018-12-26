@@ -42,9 +42,9 @@ var LinkedInProfileBar = function LinkedInProfileBar(props) {
       username = _props.username,
       organization = _props.organization,
       role = _props.role,
-      _props$barHeight = _props.barHeight,
-      barHeight = _props$barHeight === void 0 ? "50px" : _props$barHeight;
+      newPage = _props.newPage;
 
+  if (newPage == undefined) newPage = true;
   tooltip = tooltip || 'Visit Profile';
 
   var getPad = function getPad(val) {
@@ -65,7 +65,7 @@ var LinkedInProfileBar = function LinkedInProfileBar(props) {
   }, _react.default.createElement(_svgs.LinkedInSVG, null))), _react.default.createElement(_core.Tooltip, {
     title: tooltip
   }, _react.default.createElement("a", {
-    target: "_blank",
+    target: newPage ? '_blank' : '',
     href: "https://in.linkedin.com/in/".concat(username),
     style: {
       padding: '10px'
@@ -78,7 +78,7 @@ var LinkedInProfileBar = function LinkedInProfileBar(props) {
   }, _react.default.createElement(_svgs.BuildingSVG, {
     style: getPad('5px')
   }), " ", _react.default.createElement("b", null, organization))), role && _react.default.createElement(_core.Tooltip, {
-    title: "role"
+    title: "Role"
   }, _react.default.createElement(_core.Button, {
     variant: "text",
     style: _objectSpread({}, flatButtonStyle, {

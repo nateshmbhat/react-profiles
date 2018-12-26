@@ -93,6 +93,7 @@ function (_Component2) {
           competitions = _this$props2.competitions,
           username = _this$props2.username,
           rank = _this$props2.rank,
+          newPage = _this$props2.newPage,
           category = _this$props2.category,
           bronze = _this$props2.bronze,
           silver = _this$props2.silver,
@@ -100,6 +101,7 @@ function (_Component2) {
           _this$props2$barHeigh = _this$props2.barHeight,
           barHeight = _this$props2$barHeigh === void 0 ? "50px" : _this$props2$barHeigh;
 
+      if (newPage == undefined) newPage = true;
       tooltip = tooltip || 'Visit Profile';
       var flatButtonStyle = {
         backgroundColor: 'rgba(230,230,230,0.8)',
@@ -121,7 +123,7 @@ function (_Component2) {
       }))), _react.default.createElement(_core.Tooltip, {
         title: tooltip
       }, _react.default.createElement("a", {
-        target: "_blank",
+        target: newPage ? '_blank' : '',
         href: "https://www.hackerrank.com/profile/".concat(username),
         style: {
           padding: '10px'
