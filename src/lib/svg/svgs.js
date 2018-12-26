@@ -17,7 +17,7 @@ const GithubSVG = ({
     );
 
 
-const StackOverflowSVG =({height='20px' , viewBox="0 10 512 80"})=>{
+const StackOverflowSVG =({height='22px' , viewBox="0 15 512 80"})=>{
         const styles = '.st0{fill:#222426}.st1{fill:#bcbbbb}.st2{fill:#f48024}';
         return (
         <div>

@@ -11,14 +11,14 @@ store.addPlugin(expirePlugin)
 
 const LinkedInProfileBar = (props) => {
 
-    const flatButtonStyle = { backgroundColor: 'rgba(230,230,230,0.8)', borderRadius: '0', height: '100%' };
+    const flatButtonStyle = { backgroundColor: 'rgba(230,230,230,0.8)', borderRadius: '0', height: '100%', textTransform:'none' };
     let { tooltip, username, organization, role, barHeight = "50px" } = { ...props }
     tooltip = tooltip || 'Visit Profile'
 
     const getPad = (val) => { return { 'padding': val } };
     return <>
         <Grid container>
-            <Paper style={{ 'padding': '0px', margin: '0', height: barHeight }}>
+            <Grid className="Paper">
                 <Tooltip title="LinkedIn" >
                     <Button variant="text" style={flatButtonStyle}><LinkedInSVG /></Button>
                 </Tooltip>
@@ -39,7 +39,7 @@ const LinkedInProfileBar = (props) => {
                         <Button variant="text" style={{ ...flatButtonStyle, textTransform: 'none' }}> <PersonSVG style={getPad('2px')} /> {role}</Button>
                     </Tooltip>
                 }
-            </Paper>
+            </Grid>
         </Grid>
     </>
 }

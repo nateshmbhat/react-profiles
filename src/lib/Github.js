@@ -61,7 +61,7 @@ class GithubProfileBar extends Component {
         const getPad = (val) => { return { 'padding': val } };
         return <>
             <Grid container>
-                <Paper style={{ 'padding': '0px', margin: '0', height: barHeight }}>
+                <Grid className="Paper">
                     <Tooltip title="Github" >
                         <Button variant="text" style={flatButtonStyle}><GithubSVG /></Button>
                     </Tooltip>
@@ -74,7 +74,7 @@ class GithubProfileBar extends Component {
                     <Tooltip title={`${totalStars} Stars`}>
                         <Button variant="text" style={flatButtonStyle}> <i className="fa fa-star"></i> <b>{totalStars}</b></Button>
                     </Tooltip>
-                </Paper>
+                </Grid>
             </Grid>
         </>
     }

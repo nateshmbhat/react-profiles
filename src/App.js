@@ -13,10 +13,16 @@ class App extends Component {
         <Twitter link="google.com"  />
         <Skype link="google.com" />
         <Yahoo link="google.com"  />
-        <HackerRank username="nateshmbhat1" rank={4900} category="Algorithm Practice" />
+        <HackerRank username="nateshmbhat1" rank={4900} category="Algorithm Practice"
+        competitions="13"
+        contestRating="1500"
+        gold ="1" 
+        silver="2"
+        bronze="3"
+         />
         <GitHub username="nateshmbhat" />
         <StackOverflow userid="6665568" />
-        <LinkedIn username="nateshmbhat" organization="SIT" role="Student" />
+        <LinkedIn username="nateshmbhat" organization="Google" role="Developer" />
       </>
     );
   }

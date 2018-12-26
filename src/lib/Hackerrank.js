@@ -35,7 +35,7 @@ class HackerRank extends Component {
 
         return <>
             <Grid container>
-                <Paper style={{ 'padding': '0px', margin: '0', height: barHeight }}>
+                <Grid className="Paper" direction="row" >
                     <Tooltip title="Hackerrank" >
                         <Button variant="text" style={flatButtonStyle}><HackerrankSVG fill="darkgreen" /></Button>
                     </Tooltip>
@@ -60,13 +60,13 @@ class HackerRank extends Component {
                     {
                         contestRating &&
                         <Tooltip title={`Contest Rating : ${contestRating}`}>
-                            <Button variant="text" style={flatButtonStyle}> <i className="fa fa-star"><b>{contestRating}</b></i></Button>
+                            <Button variant="text" style={flatButtonStyle}> <i className="fa fa-star"></i><b>{contestRating}</b></Button>
                         </Tooltip>
                     }
                     {
                         competitions &&
                         <Tooltip title={`Competitions : ${competitions}`}>
-                            <Button variant="text" style={flatButtonStyle}> <i className="fa fa-circle"><b>{competitions}</b></i></Button>
+                            <Button variant="text" style={flatButtonStyle}> <i className="fa fa-flag"></i><b>{competitions}</b></Button>
                         </Tooltip>
                     }
 
@@ -93,8 +93,7 @@ class HackerRank extends Component {
                             <Button variant="text" style={flatButtonStyle}> <i className="fa fa-trophy" style={{ color: '#cd7f32' }}></i> <b>{bronze}</b></Button>
                         </Tooltip>
                     }
-
-                </Paper>
+</Grid>
             </Grid>
         </>
     }
