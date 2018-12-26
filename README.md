@@ -1,6 +1,6 @@
 # react-profiles
 
-> A collection various Profile components with auto data retrieval using public APIs and auto cache management of profile data. You wanna showcase your profile ? Style it up with react-profiles :)
+**A collection various Profile components with auto data retrieval using public APIs and auto cache management of profile data. You wanna showcase your profile ? Style it up with react-profiles :)**
 
 
 ## Features : 
