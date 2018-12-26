@@ -12,7 +12,7 @@
 + Customized tooltips
 
 
-![](https://i.imgur.com/Y6zaXQp.gif )
+[![](https://i.imgur.com/Y6zaXQp.gif)](#)
 
 
 ## Usage : 
@@ -35,7 +35,7 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 
 #### GitHub (auto fetch data) : 
-![Imgur](https://i.imgur.com/6Rmbhqe.png)
+[![](https://i.imgur.com/6Rmbhqe.png)](#)
 
 ```js
 <GitHub username="nateshmbhat" />
@@ -43,7 +43,7 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 
 #### StackOverflow (auto fetch data) : 
-![Imgur](https://i.imgur.com/LB4rfpI.png)
+[![Imgur](https://i.imgur.com/LB4rfpI.png)](#)
 
 ```js
 <StackOverflow userid="6665568" tooltip="custom tooltip" />
@@ -52,7 +52,7 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 #### LinkedIn (no auto fetch): 
 
-![](https://i.imgur.com/AypR95e.png)
+[![](https://i.imgur.com/AypR95e.png)](#)
 ```js
 <LinkedIn username="nateshmbhat" organization="Google" role="Developer" />
 ```
@@ -60,7 +60,7 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 #### HackerRank (no auto fetch): 
 
-![](https://i.imgur.com/AKEDXii.png)
+[![](https://i.imgur.com/AKEDXii.png)](#)
 ```js
 <HackerRank username="nateshmbhat1" rank={4900} category="Algorithm Practice"
     competitions="13"
@@ -76,7 +76,7 @@ import { GitHub, HackerRank, Facebook, StackOverflow, LinkedIn, Instagram, Googl
 
 ### Profile Chips : 
 
-![](https://i.imgur.com/XZ2S0JX.png)
+[![](https://i.imgur.com/XZ2S0JX.png)](#)
 
 ```js
 <Instagram link="https://www.instagram.com/nateshmbhat/" />
