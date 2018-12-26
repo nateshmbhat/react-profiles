@@ -4,12 +4,12 @@
 
 
 ## Features : 
-+ Profile UI components
-+ compressed SVG icons for scalability.
-+ font awesome fonts with animations 
-+ uses public APIs to fetch data based on given username
-+ material ui components.
-+ Customized tooltips
++ Profile components for lot of common sites.
++ Compressed SVG icons for scalability.
++ Uses public APIs to fetch data based on given username
++ Manages caching of API data automatically with appropriate refresh frequency.
++ Material ui components for visual treat.
++ Tooltip customization.
 
 
 [![](https://i.imgur.com/Y6zaXQp.gif)](#)
