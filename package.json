@@ -19,7 +19,7 @@
   "author": "nateshmbhat",
   "dependencies": {
     "@material-ui/core": "^3.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-preset-stage-1": "^6.24.1",
     "prop-types": "15.6.0",
     "react": "^16.7.0",
